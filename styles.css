@@ -1,0 +1,78 @@
+/* Container for bundle options */
+.bundle-options {
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+    flex-flow: column wrap;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+    position: static;
+    margin-bottom: 20px;
+}
+
+/* Individual bundle option */
+.bundle-option {
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+    overflow: visible;
+}
+
+/* Bundle option radio input */
+.bundle-option input[type="radio"] {
+  display: none;
+}
+
+.bundle-option.current-qty .qty_radio {
+  border: 6px solid #2a2552;
+}
+
+/* Bundle option label */
+.bundle-text {
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  color: #414141;
+}
+
+/* Bundle option hover effect */
+.bundle-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Bundle option radio input */
+.bundle-option input[type="radio"] {
+  display: none;
+}
+
+/* Bundle option label */
+.bundle-option label {
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent text wrapping */
+  color: #000;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bundle option hover effect */
+.bundle-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Bundle option selected */
+.bundle-option input[type="radio"]:checked + label {
+  color: #ffffff;
+  background-color: #0076ff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  white-space: nowrap; /* Prevent text wrapping */
+}
