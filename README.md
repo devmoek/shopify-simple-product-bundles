@@ -1,1 +1,1 @@
-# shopify-simple-product-bundles
+# Shopify Product Bundles (simple variant)
