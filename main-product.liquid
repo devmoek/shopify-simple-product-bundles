@@ -1,0 +1,15 @@
+<form method="post" action="/cart/add">
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+  <div class="bundle-options" style="display: flex; justify-content: space-between;">
+    {% for i in (1..4) %}
+      {% assign discount = i | minus: 1 | times: 0.05 %}
+      {% assign discounted_price = product.price | times: i | times: 1.00 | minus: discount %}
+      <div class="bundle-option">
+        <input type="radio" name="quantity" id="bundle_qty_{{ i }}" value="{{ i }}" {% if i == 1 %}checked{% endif %}>
+        <label for="bundle_qty_{{ i }}">
+          {{ i }} - {{ discounted_price | money }} (Save {{ discount | times: 100 }}%)
+        </label>
+      </div>
+    {% endfor %}
+  </div>
+</form>
