@@ -1,6 +1,6 @@
 <form method="post" action="/cart/add">
   <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-  <div class="bundle-options" style="display: flex; justify-content: space-between;">
+  <div class="bundle-options">
     {% for i in (1..4) %}
       {% assign discount = i | minus: 1 | times: 0.05 %}
       {% assign discounted_price = product.price | times: i | times: 1.00 | minus: discount %}
